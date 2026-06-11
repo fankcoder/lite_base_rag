@@ -1,0 +1,39 @@
+{
+  "test_queries": [
+    {
+      "query": "公司的核心产品有哪些？",
+      "type": "factual",
+      "difficulty": "easy"
+    },
+    {
+      "query": "国标 GB 26875.1 的适用范围是什么？",
+      "type": "factual",
+      "difficulty": "medium"
+    },
+    {
+      "query": "成都展厅有哪些展区？",
+      "type": "factual",
+      "difficulty": "easy"
+    },
+    {
+      "query": "电信通项目的主要成果是什么？",
+      "type": "summarization",
+      "difficulty": "medium"
+    },
+    {
+      "query": "部门管理规范中关于考勤的规定是什么？",
+      "type": "factual",
+      "difficulty": "easy"
+    },
+    {
+      "query": "公司 2025 年的营收是多少？",
+      "type": "unanswerable",
+      "difficulty": "hard"
+    },
+    {
+      "query": "公司的 CEO 是谁？",
+      "type": "unanswerable",
+      "difficulty": "hard"
+    }
+  ]
+}
