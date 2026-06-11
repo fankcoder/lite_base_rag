@@ -97,6 +97,12 @@ uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 
 访问 http://localhost:8000/docs 查看 API 文档。
 
+## openclaw技能
+
+```
+/skill lite-base-rag-search.md <输入查找内容>
+```
+
 ## 📖 使用指南
 
 详细设计文档见 `../rag_plan/ 目录。
