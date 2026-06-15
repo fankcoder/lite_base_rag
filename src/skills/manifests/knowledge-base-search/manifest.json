@@ -1,0 +1,11 @@
+{
+  "name": "knowledge-base-search",
+  "version": "1.0.0",
+  "description": "RAG knowledge retrieval skill - 通过向量+BM25+Rerank检索知识库，结合LLM回答问题",
+  "entry": "skills/knowledge_search.py",
+  "capabilities": ["retrieval", "qa", "hybrid-search"],
+  "embedding_required": true,
+  "permissions": ["local_read", "vector_search"],
+  "tags": ["rag", "knowledge-base", "search"],
+  "author": "system"
+}

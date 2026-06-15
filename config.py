@@ -39,7 +39,26 @@ class ParserConfig:
     CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "100"))
     MIN_CHUNK_SIZE = int(os.getenv("MIN_CHUNK_SIZE", "50"))
     MAX_CHUNK_SIZE = int(os.getenv("MAX_CHUNK_SIZE", "1000"))
-    SUPPORTED_FORMATS = [".md", ".pdf", ".pptx", ".docx", ".txt"]
+    SUPPORTED_FORMATS = [".md", ".pdf", ".pptx", ".docx", ".txt", ".html", ".htm"]
+    USE_MARKITDOWN = os.getenv("USE_MARKITDOWN", "true").lower() == "true"
+    USE_STRUCTURED_CHUNKING = os.getenv("USE_STRUCTURED_CHUNKING", "true").lower() == "true"
+
+
+# ==================== Tracing 配置 ====================
+class TracingConfig:
+    ENABLED = os.getenv("TRACING_ENABLED", "true").lower() == "true"
+    BACKEND = os.getenv("TRACING_BACKEND", "memory")  # memory / elasticsearch / clickhouse / loki
+    STORE_MAX_EVENTS = int(os.getenv("TRACING_MAX_EVENTS", "200000"))
+    ASYNC_WRITER_WORKERS = int(os.getenv("TRACING_ASYNC_WORKERS", "2"))
+    LOG_JSON = os.getenv("TRACING_LOG_JSON", "true").lower() == "true"
+
+
+# ==================== Skills 配置 ====================
+class SkillsConfig:
+    ENABLED = os.getenv("SKILLS_ENABLED", "true").lower() == "true"
+    SKILLS_DIR = os.getenv("SKILLS_DIR", str(BASE_DIR / "skills"))
+    ALLOW_UNTRUSTED = os.getenv("SKILLS_ALLOW_UNTRUSTED", "false").lower() == "true"
+
 
 
 # ==================== 检索配置 ====================
@@ -87,3 +106,5 @@ retriever_config = RetrieverConfig()
 llm_config = LLMConfig()
 server_config = ServerConfig()
 knowledge_config = KnowledgeConfig()
+tracing_config = TracingConfig()
+skills_config = SkillsConfig()

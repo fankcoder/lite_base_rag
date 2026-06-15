@@ -14,6 +14,8 @@ pandas>=2.0.0
 markdown>=3.6
 beautifulsoup4>=4.12
 Jinja2>=3.0
+# Microsoft MarkItDown (可选 - 安装后自动启用)
+markitdown>=0.0.1a3
 
 # 中文分词
 jieba>=0.42.1
